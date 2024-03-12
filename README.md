@@ -7,11 +7,12 @@
 ## Mosqitto broker setup in Raspberry Pi
 
 ## MQTT publish client in Raspberry Pi
-1. install paho-mqtt package by running the command in ssh terminal:
+1. Connect a BME280 to the Raspberry Pi via I2C.
+2. Install paho-mqtt package by running the command in ssh terminal:
    ```
    pip install paho-mqtt
    ```
-2. download example code:
+3. download example code:
    ```
    wget https://raw.githubusercontent.com/JZ2211/IIoT_wk6/main/mqttpub_bme280.py
    wget https://raw.githubusercontent.com/JZ2211/IIoT_wk6/main/savedata.py
@@ -34,7 +35,8 @@
 5. Run the python program. If it runs sucessfully, it will save received messaged in files under ***HOMEPATH***.
 
 ## NodeMCU MQTT Client
-1. Download Arduino IDE if you haven't done so from https://www.arduino.cc/en/software
+1. Connect a BME280 board to the NodeMCU via I2C.  
+2. Download Arduino IDE if you haven't done so from https://www.arduino.cc/en/software
 3. Download the example code: ```bme280_mqtt.ino```
 4. Open the example file in Arduino IDE. Choose the correct COM port and board NodeMCU 1.0.
 5. Modify the wifi configuration and also the configurations related to MQTT server at the top of the program.
