@@ -7,7 +7,7 @@
   Modified July 24 2023 by Jin Zhu
 
   This example code is under MIT license and available at 
-  https://github.com/JZ2211/IIoT_wk6/bme280_mqtt.ino
+  https://github.com/JZ2211/IIoT_wk6/blob/main/bme280_mqtt.ino
 
 */
 
