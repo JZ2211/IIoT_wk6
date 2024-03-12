@@ -5,6 +5,36 @@
 <img src="https://github.com/JZ2211/IIoT_wk6/assets/100505718/c60ae3bb-a8b9-4eb0-84a6-13098ee19640" width="600">
 
 ## Mosqitto broker setup in Raspberry Pi
+1. Check if the mosquitto broker service is up and running: ```systemctl status mosquitto```
+2. If not, install it first:
+   ```
+   sudo apt install mosquitto  mosquitto-clients
+   ```
+3. Setup the client authentication using ```mosquitto_passwd -c pwfile username```
+   where username is the username that the MQTT client is going to use. Enter password.
+   You can add additional user/password using ```mosquitto_passwd -b pwfile username password```
+4. Move the password file ***pwfile*** under ```/etc/mosquitto``` directory if not yet.
+5. Stop mosquitto service: ```sudo systemctl stop mosquitto```
+6. Modify the mosquitto configuration file :
+   ```
+   sudo nano /etc/mosquitto/mosquitto.conf
+   ```
+   Add the following lines to the file:
+   ```
+   allow_anonymous false
+   password_file /etc/mosquitto/pwfile
+   listener 1883
+   ```
+7. Restart the mosquitto service: ```sudo systemctl restart mosquitto ```
+8. You can test if it works by running the command in one ssh terminal:
+   ```
+   mosquitto_sub -u username -P password -t Test
+   ```
+   and the following commend in another ssh terminal:
+   ```
+   mosquitto_pub -u username -P password -t Test  -m "This is a test"
+   ```
+   If successful, the message "This is a test" should display in the mosquitto_sub terminal. 
 
 ## MQTT publish client in Raspberry Pi
 1. Connect a BME280 to the Raspberry Pi via I2C.
