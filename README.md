@@ -30,8 +30,8 @@
    pip install paho-mqtt
    ```
 3. Download the example code: ```mqttsub_4windows.py```
-4. Modify the HOMEPATH (where you want to save the data to) and the configurations related to the MQTT broker at the top the code.
-5. Run the python program. If it runs sucessfully, it will save received messaged in files under HOMEPATH.
+4. Modify the ***HOMEPATH*** (where you want to save the data to) and the configurations related to the MQTT broker at the top the code.
+5. Run the python program. If it runs sucessfully, it will save received messaged in files under ***HOMEPATH***.
 
 ## NodeMCU MQTT Client
 1. Download Arduino IDE if you haven't done so from https://www.arduino.cc/en/software
