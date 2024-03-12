@@ -6,12 +6,12 @@
 
 ## MQTT client on Raspberry Pi :
 1. install paho-mqtt package by running the command in ssh terminal:
-```
+   ```
     pip install paho-mqtt
-```
+   ```
 2. download example code:
    ```
-wget https://raw.githubusercontent.com/JZ2211/IIoT_wk6/main/mqttpub_bme280.py
-wget https://raw.githubusercontent.com/JZ2211/IIoT_wk6/main/savedata.py
+    wget https://raw.githubusercontent.com/JZ2211/IIoT_wk6/main/mqttpub_bme280.py
+    wget https://raw.githubusercontent.com/JZ2211/IIoT_wk6/main/savedata.py
    ```
 4. Download the file
