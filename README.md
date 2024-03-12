@@ -34,7 +34,7 @@
    ```
    mosquitto_pub -u username -P password -t Test  -m "This is a test"
    ```
-   If successful, the message "This is a test" should display in the mosquitto_sub terminal. 
+   Where the username and password should be the ones that you just setup. If successful, the message "This is a test" should display in the mosquitto_sub terminal. 
 
 ## MQTT publish client in Raspberry Pi
 1. Connect a BME280 to the Raspberry Pi via I2C.
